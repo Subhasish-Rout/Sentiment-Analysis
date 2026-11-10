@@ -39,7 +39,10 @@ cd movie-sentiment-analyzer
 
 ### 2. Install dependencies
 ```bash
-pip install -r requirements.txt
+streamlit
+requests
+pandas
+vaderSentiment
 ```
 
 ### 3. Get your API keys

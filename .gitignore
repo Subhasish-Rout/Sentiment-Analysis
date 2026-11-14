@@ -1,0 +1,64 @@
+# =====================================================================
+# Project Reports & Documents (Added as requested)
+# =====================================================================
+*.docx
+*.pdf
+Movie_Sentiment_Analyzer_Report*.docx
+Movie_Sentiment_Analyzer_Report*.pdf
+Movie_Sentiment_Analyzer_Report_backup.docx
+test_img.docx
+reports/
+
+# =====================================================================
+# Secrets & Credentials (NEVER push API keys to GitHub)
+# =====================================================================
+Key.streamlit/
+.streamlit/secrets.toml
+secrets.toml
+*.env
+
+# =====================================================================
+# Datasets (Large files > 50MB should not be tracked directly in Git)
+# =====================================================================
+archive/
+*.csv
+
+# =====================================================================
+# Jupyter Notebook & Python Cache
+# =====================================================================
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# =====================================================================
+# Virtual Environments & IDE
+# =====================================================================
+venv/
+env/
+.venv/
+.env/
+.vscode/
+.idea/
+
+# =====================================================================
+# OS-generated files
+# =====================================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =====================================================================
+# Standalone / Unrelated Experiments
+# =====================================================================
+face_analyzer.py
+
+# =====================================================================
+# Trained Models
+# Note: model.pkl (~40KB) and tfidf.pkl (~183KB) are small enough to push
+# so your Streamlit app works out-of-the-box. If you prefer NOT to track
+# binary pickle files in GitHub, uncomment the line below:
+# *.pkl
+# =====================================================================
+

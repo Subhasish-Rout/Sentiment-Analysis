@@ -1,0 +1,10 @@
+streamlit
+streamlit-searchbox
+requests
+nltk
+scikit-learn
+pandas
+numpy
+matplotlib
+seaborn
+

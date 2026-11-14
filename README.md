@@ -1,17 +1,14 @@
 # 🎬 Movie Sentiment Analyzer
 
-A Streamlit web app that lets you search for any movie and see how audiences
-feel about it. It combines movie data from **TMDB** and **OMDb** with
-sentiment analysis of real user reviews to give a quick, data-backed view
-of a film's reception.
+A Streamlit web app that lets you search for any movie and see how audiences feel about it. It combines movie data from **TMDB** and **OMDb** with sentiment analysis of real user reviews to give a quick, data-backed view of a film's reception.
 
 ## ✨ Features
 
-- 🔍 **Real-time search suggestions**: suggestions appear as you type
+- 🔍 **Real-time search suggestions**: suggestions appear as you type using `streamlit-searchbox`
 - 🎞️ **Movie details**: title, release year, genre, runtime, cast, plot and more
 - ⭐ **Ratings**: IMDb and other ratings pulled from OMDb, plus TMDB's audience score
 - 🖼️ **Poster display**: high-quality poster fetched from TMDB
-- 🧠 **Sentiment analysis**: overall sentiment (Positive / Negative / Neutral) calculated from audience reviews
+- 🧠 **Sentiment analysis**: overall sentiment (Positive / Negative) calculated from audience reviews using trained ML model & TF-IDF
 - 💬 **Original user reviews**: real reviews from viewers, shown next to the sentiment result
 
 ## 🛠️ How It Works
@@ -27,37 +24,35 @@ of a film's reception.
 - **Framework:** Streamlit
 - **Language:** Python
 - **APIs:** TMDB API, OMDb API
-- **NLP:** your sentiment library here (e.g. VADER / TextBlob / transformers)
+- **Machine Learning / NLP:** Scikit-Learn, TF-IDF, NLTK, Pandas, NumPy
 
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/Subhasish-Rout/movie-sentiment-analyzer.git
-cd movie-sentiment-analyzer
+git clone https://github.com/Subhasish-Rout/Sentiment-Analysis.git
+cd Sentiment-Analysis
 ```
 
 ### 2. Install dependencies
 ```bash
-streamlit
-requests
-pandas
-vaderSentiment
+pip install -r requirements.txt
 ```
 
-### 3. Get your API keys
-- TMDB: https://www.themoviedb.org/settings/api
-- OMDb: https://www.omdbapi.com/apikey.aspx
-
-### 4. Add your keys
-Create a `.streamlit/secrets.toml` file:
-```toml
-```
-Or use a `.env` file if that's how your app loads them.
-
-### 5. Run the app
+### 3. Configure API keys
+Copy `.streamlit/secrets.toml.example` to `.streamlit/secrets.toml`:
 ```bash
-streamlit run app.py
+cp .streamlit/secrets.toml.example .streamlit/secrets.toml
+```
+Add your free keys from [TMDB](https://www.themoviedb.org/settings/api) and [OMDb](https://www.omdbapi.com/apikey.aspx) in `.streamlit/secrets.toml`:
+```toml
+OMDB_KEY = "your_omdb_key"
+TMDB_KEY = "your_tmdb_key"
+```
+
+### 4. Run the app
+```bash
+streamlit run app3.py
 ```
 
 ## 📸 Screenshots
